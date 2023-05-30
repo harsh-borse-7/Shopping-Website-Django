@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>HB Cart</title>
+  </head>
+  <body style="background: radial-gradient(circle, rgba(49,149,123,1) 0%, rgba(52,116,164,1) 100%);">
+    <h1 style="text-align: center; font-family:Brush Script MT;font-size:80px ">Welcome to HB Cart</h1>
+
+    {% load static %}
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/shop"><img src="{% static 'images/logo.jpg' %}" alt="" style="width: 60px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/shop">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/about">About US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/productview">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/shop/contact_page">Contact Us</a>
+            </li>
+
+          </ul>
+          <form class="d-flex" method="post" action="/shop/search">
+            {% csrf_token %}
+            <input class="form-control me-2" id="search" name="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+         
+
+          <div class="nav-item mx-2 cart" style="border: 1px solid; border-color: red; border-radius: 5px;">
+            <a class="nav-link" href="/shop/cart" style="color: red;">Cart</a>
+          </div>
+          
+        </div>
+      </div>
+    </nav>
+    
+   <br>
+
+
+    <div class="container" style="text-align: justify;" id="aboutus">
+        <h1 style="text-align: center;">About Us</h1>
+        <p>
+            At HB Shopping, we strive to provide a seamless and enjoyable online shopping experience for our valued customers. We are dedicated to offering a wide range of high-quality products, exceptional customer service, and secure transactions. Whether you're looking for the latest fashion trends, electronics, home decor, or everyday essentials, we have you covered.
+        </p>
+        <h2>Our Commitment:</h2>
+        <ul>
+            <li><strong>Quality Products:</strong> We handpick our products from trusted suppliers to ensure they meet our strict quality standards. We believe that every item you purchase from us should exceed your expectations.</li>
+            <li><strong>Convenience:</strong> We understand the importance of convenience in today's fast-paced world. That's why we have designed our website to be user-friendly and easy to navigate. With just a few clicks, you can explore our diverse product catalog and find exactly what you need.</li>
+            <li><strong>Exceptional Customer Service:</strong> Your satisfaction is our top priority. Our friendly and knowledgeable customer support team is here to assist you every step of the way. If you have any questions, concerns, or need assistance, feel free to reach out to us. We're always here to help.</li>
+            <li><strong>Secure Shopping:</strong> We take your privacy and security seriously. When you shop with us, you can rest assured that your personal information is protected. We utilize industry-standard security measures and encryption to safeguard your data during transactions.</li>
+            <li><strong>Fast Shipping:</strong> We understand that you're excited to receive your purchases. That's why we work diligently to process and ship your orders promptly. We partner with reliable shipping carriers to ensure your products arrive in a timely manner.</li>
+        </ul>
+        <p>
+            We value your feedback and continuously strive to improve our services. Your satisfaction is what drives us to deliver the best possible online shopping experience. <br>Thank you for choosing HB Shopping. We look forward to serving you and making your shopping experience exceptional.
+        </p>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  
+  </body>
+</html>
