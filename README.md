@@ -1,7 +1,7 @@
 # Shopping-Website-Django
 
 This is a fully functional shopping website built using Django, a high-level Python web framework. The website provides a user-friendly interface for online shopping, featuring various essential components and functionalities.
-
+ 
 ## Features
 - Home Page: The landing page of the website showcases featured products, promotional offers, and a user-friendly navigation menu.
 - Product Catalog: Browse through a wide range of products categorized by different categories, making it easy to find desired items.
